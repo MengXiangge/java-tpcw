@@ -81,9 +81,9 @@ class TPCW_Populate {
     private static final int NUM_EBS = @num.eb@;
     private static final int NUM_ITEMS = @num.item@;
 
-    private static final int NUM_CUSTOMERS = NUM_EBS * 2880;
+    private static final int NUM_CUSTOMERS = NUM_EBS;
     private static final int NUM_ADDRESSES = 2 * NUM_CUSTOMERS;
-    private static final int NUM_AUTHORS = (int) (.25 * NUM_ITEMS);
+    private static final int NUM_AUTHORS = (int) (.1 * NUM_ITEMS);
     private static final int NUM_ORDERS = (int) (.9 * NUM_CUSTOMERS);
 
     //    private static final int NUM_ADDRESSES = 10;
