@@ -12,49 +12,20 @@ public class TPCW_home_interaction extends HttpServlet {
       Vector column1 = new Vector();
       Vector column2 = new Vector();
 
-      //column1.addElement(new String("HP"));//1
-      //column2.addElement(new String("Dell"));
-      //column1.addElement(new String("Apple"));//2
-      //column2.addElement(new String("Asus"));
-      //column1.addElement(new String("Acer"));//3
-      //column2.addElement(new String("Lenovo"));
-      //column1.addElement(new String("Alienware"));//4
-      //column2.addElement(new String("Sony"));
-      //column1.addElement(new String("Panasonic"));//5
-      //column2.addElement(new String("Toshiba"));
-      //column1.addElement(new String("Sansung"));//6
-      //column2.addElement(new String("Compaq"));
-      //column1.addElement(new String("Microsoft"));//7
-      //column2.addElement(new String("Sager"));
-      //column1.addElement(new String("LG"));//8
-      //column2.addElement(new String("CyberPower PC"));
-      //column1.addElement(new String("Google"));//9
-      //column2.addElement(new String("Intel"));
-      //column1.addElement(new String("MSI"));//10
-      //column2.addElement(new String("RCA"));
-      //column1.addElement(new String("Gateway"));//11
-      //column2.addElement(new String("Bit"));
-      column1.addElement(new String("ARTS"));//1
-      column2.addElement(new String("NON-FICTION"));
-      column1.addElement(new String("BIOGRAPHIES"));//2
-      column2.addElement(new String("PARENTING"));
-      column1.addElement(new String("BUSINESS"));//3
-      column2.addElement(new String("POLITICS"));
-      column1.addElement(new String("CHILDREN"));//4
-      column2.addElement(new String("REFERENCE"));
-      column1.addElement(new String("COMPUTERS"));//5
-      column2.addElement(new String("RELIGION"));
-      column1.addElement(new String("COOKING"));//6
-      column2.addElement(new String("ROMANCE"));
-      column1.addElement(new String("HEALTH"));//7
-      column2.addElement(new String("SELF-HELP"));
-      column1.addElement(new String("HISTORY"));//8
-      column2.addElement(new String("SCIENCE-NATURE"));
-      column1.addElement(new String("HOME"));//9
-      column2.addElement(new String("SCIENCE-FICTION"));
-      column1.addElement(new String("HUMOR"));//10
-column2.addElement(new String("SPORTS"));
-
+      column1.addElement(new String("HP"));//1
+      column2.addElement(new String("Dell"));
+      column1.addElement(new String("Acer"));//2
+      column2.addElement(new String("Asus"));
+      column1.addElement(new String("Apple"));//3
+      column2.addElement(new String("Sansung"));
+      column1.addElement(new String("Alienware"));//4
+      column2.addElement(new String("Lenovo"));
+      column1.addElement(new String("Microsoft"));//5
+      column2.addElement(new String("MSI"));
+      column1.addElement(new String("Sony"));//6
+      column2.addElement(new String("Huawei"));
+      column1.addElement(new String("Compaq"));//7
+      column2.addElement(new String("Joso"));
       /*SERVLET SETUP*/
       HttpSession session = req.getSession(false);
       if(session == null)
@@ -70,9 +41,9 @@ column2.addElement(new String("SPORTS"));
       String SHOPPING_ID = req.getParameter("SHOPPING_ID");
 
       //Generate Home Page Head
-      out.print("<HTML> <HEAD> <TITLE>Laptop Trading and Information Platform</TITLE></HEAD>\n");
+      out.print("<HTML> <HEAD> <TITLE>Laptop Guru Platform</TITLE></HEAD>\n");
       out.print("<BODY BGCOLOR=\"#ffffff\">\n"); 
-      out.print("<H1 ALIGN=\"center\">Laptop Trading and Information Platform</H1>\n");
+      out.print("<H1 ALIGN=\"center\">Laptop Guru Platform</H1>\n");
       out.print("<P ALIGN=\"CENTER\">\n");
       out.print("<IMG SRC=\"../tpcw/Images/tpclogo.gif\" ALIGN=\"BOTTOM\""+ 
 		"BORDER=\"0\" WIDTH=\"288\" HEIGHT=\"67\"></P>\n");
@@ -85,18 +56,19 @@ column2.addElement(new String("SPORTS"));
       //Insert the promotional processing
       TPCW_promotional_processing.DisplayPromotions(out, req, res,-1);
 
-      //Generate Table of Top Rated and Amazon Prime tables
+      //Generate Table of What's New and BestSellers
+      //Table headings
       out.print("<TABLE ALIGN=\"center\" BGCOLOR=\"#c0c0c0\" BORDER=\"0\""+
 		" CELLPADDING=\"6\" CELLSPACING=\"0\" WIDTH=\"700\">\n");
       out.print("<TR ALIGN=\"CENTER\" BGCOLOR=\"#ffffff\" VALIGN=\"top\">\n");
       out.print("<TD COLSPAN=\"2\" VALIGN=\"MIDDLE\" WIDTH=\"300\">\n");
-      out.print("<IMG SRC=\"../tpcw/Images/top_rated.jpeg\""+ 
-		" ALT=\"Top Rated\">\n");
+      out.print("<IMG SRC=\"../tpcw/Images/whats_new.gif\""+ 
+		" ALT=\"New Product\">\n");
       out.print("</TD>\n");
       out.print("<TD BGCOLOR=\"#ffffff\" WIDTH=\"100\"></TD>\n");
       out.print("<TD COLSPAN=\"2\" WIDTH=\"300\">\n");
-      out.print("<IMG SRC=\"../tpcw/Images/amazon_prime.png\""+
-		" ALT=\"Amazon Prime\"></TD></TR>\n");
+      out.print("<IMG SRC=\"../tpcw/Images/best_sellers.gif\""+
+		" ALT=\"Best Seller\"></TD></TR>\n");
       
       for(i = 0; i < column1.size(); i++){
 	  out.print("<TR><TD><P ALIGN=\"center\">");
@@ -189,12 +161,7 @@ column2.addElement(new String("SPORTS"));
       out.print("\"><IMG SRC=\"../tpcw/Images/order_status_B.gif\"" +
 		" ALT=\"Order Status\"></A>\n");
       
-      //Generate Trailer
-      out.print("<hr><font size=-1>\n");
-      out.print("<a href=\"http://www.tpc.org/miscellaneous/TPC_W.folder/Company_Public_Review.html\">TPC-W Benchmark</a>,\n"); 
-      out.print("<a href=\"http://www.google.com\">ECE 902</a>,\n");
-      out.print("<a href=\"http://www.google.com\">Computer Laptop Trading and Information Platform</a>,December 2017.\n");
-      out.print("</font> </BODY> </HTML>\n");
+
       out.close();
       return;
   }

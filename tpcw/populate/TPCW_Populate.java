@@ -79,11 +79,11 @@ class TPCW_Populate {
     //ATTENTION: The NUM_EBS and NUM_ITEMS variables are the only variables
     //that should be modified in order to rescale the DB.
     private static final int NUM_EBS = @num.eb@;
-    private static final int ITEMS = @num.item@;
-    private static final int NUM_ITEMS = (int)(.0917 * ITEMS);
-    private static final int NUM_CUSTOMERS = NUM_EBS;
+    private static final int NUM_ITEMS = @num.item@;
+
+    private static final int NUM_CUSTOMERS = NUM_EBS * 2880;
     private static final int NUM_ADDRESSES = 2 * NUM_CUSTOMERS;
-    private static final int NUM_AUTHORS = (int) (.1 * NUM_ITEMS);
+    private static final int NUM_AUTHORS = (int) (.25 * NUM_ITEMS);
     private static final int NUM_ORDERS = (int) (.9 * NUM_CUSTOMERS);
 
     //    private static final int NUM_ADDRESSES = 10;
