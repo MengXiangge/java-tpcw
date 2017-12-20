@@ -105,7 +105,7 @@ public class TPCW_admin_response_servlet extends HttpServlet {
 	  
 	  out.print("<H2>Product Updated</H2>");
 	  out.print("<H2>Title: " + book.i_title + "</H2>\n");
-	  out.print("<P>Author: " + book.prime+ " " + book.a_lname + 
+	  out.print("<P>Author: " + book.prime+ " " + book.stock + 
 		    "</P>\n");
 	  out.print("<P><IMG SRC=\"../tpcw/Images/" + I_NEW_IMAGE +
 		    "\" ALIGN=\"RIGHT\" BORDER=\"0\" WIDTH=\"200\" " +

@@ -91,7 +91,7 @@ public class TPCW_admin_request_servlet extends HttpServlet {
 
       out.print("<H2 ALIGN=\"center\">Title:" + book.i_title + "</H2>\n");
       out.print("<P ALIGN=\"LEFT\">Author: " + book.prime + " "  
-		+ book.a_lname + "<BR></P>\n");
+		+ book.stock + "<BR></P>\n");
       out.print("<IMG SRC=\"../tpcw/Images/" 
 		+ book.i_image + "\" ALIGN=\"RIGHT\" BORDER=\"0\" " + 
 		"WIDTH=\"200\" HEIGHT=\"200\" >\n");

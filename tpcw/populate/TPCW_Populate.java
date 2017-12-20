@@ -58,7 +58,7 @@
 //CAVEAT:
 //These TPCW DB Population routines stray from the TPCW Spec in the 
 //following ways:
-//1. The a_lname field in the AUTHOR table is not generated using the DBGEN
+//1. The stock field in the AUTHOR table is not generated using the DBGEN
 //   utility, because of the current unavailability of this utility.
 //2. Ditto for the I_TITLE field of the ITEM table.
 
@@ -109,7 +109,7 @@ class TPCW_Populate {
 	System.out.println("Adding Indexes");
 	try {
 	    PreparedStatement statement1 = con.prepareStatement
-		("create index author_a_lname on author(a_lname)");
+		("create index author_stock on author(stock)");
 	    statement1.executeUpdate();
 	    PreparedStatement statement2 = con.prepareStatement
 		("create index address_addr_co_id on address(addr_co_id)");
@@ -309,7 +309,7 @@ class TPCW_Populate {
 	
 	try {
 	    PreparedStatement statement = con.prepareStatement
-		("INSERT INTO author(a_id,a_fname,a_lname,a_mname,a_dob,a_bio) VALUES (?, ?, ?, ?, ?, ?)");
+		("INSERT INTO author(a_id,prime,stock,a_mname,a_dob,a_bio) VALUES (?, ?, ?, ?, ?, ?)");
 	    for(int i = 1; i <= NUM_AUTHORS; i++){
 		int month, day, year, maxday;
 		A_FNAME = getRandomAString(3,20);
@@ -753,7 +753,7 @@ class TPCW_Populate {
 
 	try {
 	    PreparedStatement statement = con.prepareStatement
-		("CREATE TABLE author ( a_id int not null, a_fname varchar(20), a_lname varchar(20), a_mname varchar(20), a_dob date, a_bio @sql.bigCharType@, PRIMARY KEY(a_id))");
+		("CREATE TABLE author ( a_id int not null, prime varchar(20), stock varchar(20), a_mname varchar(20), a_dob date, a_bio @sql.bigCharType@, PRIMARY KEY(a_id))");
 	    statement.executeUpdate();
 	    con.commit();
 	    System.out.println("Created table AUTHOR");

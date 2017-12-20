@@ -109,9 +109,9 @@ public class TPCW_best_sellers_servlet extends HttpServlet {
       for(i = 0; i < books.size(); i++){
 	  ShortBook book = (ShortBook) books.elementAt(i);
 	  out.print("<TR><TD>" + (i+1) + "</TD>\n");
-	  // out.print("<TD><I>"+ book.prime +" "+ book.a_lname +"</I></TD>\n");
+	  // out.print("<TD><I>"+ book.prime +" "+ book.stock +"</I></TD>\n");
 	  out.print("<TD><I>"+ book.prime +"</I></TD>\n");
-	  out.print("<TD><I>"+ book.a_lname +"</I></TD>\n");
+	  out.print("<TD><I>"+ book.stock +"</I></TD>\n");
 	  url = "./TPCW_product_detail_servlet?I_ID="+ 
 	      String.valueOf(book.i_id);
 	  if(SHOPPING_ID != null)
