@@ -69,7 +69,7 @@ public class ShortBook {
 	try {
 	    i_id = rs.getInt("i_id");
 	    i_title = rs.getString("i_title");
-	    a_fname = rs.getString("a_fname");
+	    prime = rs.getString("prime");
 	    a_lname = rs.getString("a_lname");		
 	} catch (java.lang.Exception ex) {
 	    ex.printStackTrace();
@@ -78,7 +78,7 @@ public class ShortBook {
     // From Item
     public int i_id;
     public String i_title;
-    public String a_fname;
+    public String prime;
     public String a_lname;
 }
 

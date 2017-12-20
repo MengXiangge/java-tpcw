@@ -376,7 +376,7 @@ public class TPCW_Database {
 	    //This is Mikko's optimized version, which depends on the fact that
 	    //A table named "bestseller" has been created.
 	    /*PreparedStatement statement = con.prepareStatement
-		("SELECT bestseller.i_id, i_title, a_fname, a_lname, ol_qty " + 
+		("SELECT bestseller.i_id, i_title, prime, a_lname, ol_qty " + 
 		 "FROM item, bestseller, author WHERE item.i_subject = ?" +
 		 " AND item.i_id = bestseller.i_id AND item.i_a_id = author.a_id " + 
 		 " ORDER BY ol_qty DESC FETCH FIRST 50 ROWS ONLY");*/

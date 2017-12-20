@@ -85,7 +85,7 @@ public class TPCW_product_detail_servlet extends HttpServlet {
       out.print("</CENTER> <H2 ALIGN=\"center\">Product Detail Page</H2>\n"); 
 
       out.print("<H2> Product Name: "+mybook.i_title +"</H2>\n");
-      out.print("<P>Prime, Stock: "+mybook.a_fname +" "+mybook.a_lname + "<BR>\n");
+      out.print("<P>Prime, Stock: "+mybook.prime +" "+mybook.a_lname + "<BR>\n");
       out.print("Make: " + mybook.i_subject + "\n");
       out.print("<P><IMG SRC=../tpcw/Images/"+mybook.i_image + 
 	    " ALIGN=\"RIGHT\" BORDER=\"0\" WIDTH=\"200\" HEIGHT=\"200\">\n");

@@ -115,7 +115,7 @@ public class TPCW_execute_search extends HttpServlet {
       for(i = 0; i < books.size(); i++){
 	  Book myBook = (Book) books.elementAt(i);
 	  out.print("<TR><TD>" + (i + 1)+"</TD>\n");
-	  out.print("<TD><I>"+ myBook.a_fname + " " + 
+	  out.print("<TD><I>"+ myBook.prime + " " + 
 		    myBook.a_lname +"</I></TD>");
 	  url = "./TPCW_product_detail_servlet?I_ID=" + 
 	      String.valueOf(myBook.i_id);
