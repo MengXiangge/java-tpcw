@@ -92,7 +92,7 @@ public class Book {
 	    i_page = rs.getInt("i_page");
 	    i_backing = rs.getString("i_backing");
 	    i_dimensions = rs.getString("i_dimensions");
-	    a_id = rs.getInt("a_id");
+	    a_id = id;
 	    prime = rs.getString("i_prime");
 	    stock = rs.getString("ii_stock");		
 	} catch (java.lang.Exception ex) {
