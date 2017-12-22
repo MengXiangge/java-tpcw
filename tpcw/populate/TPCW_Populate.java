@@ -800,7 +800,7 @@ class TPCW_Populate {
 
 	try {
 	    PreparedStatement statement = con.prepareStatement
-		("CREATE TABLE item ( i_id int not null, i_title varchar(60), i_a_id int, i_pub_date date, i_publisher varchar(60), i_subject varchar(60), i_desc @sql.bigCharType@, i_related1 int, i_related2 int, i_related3 int, i_related4 int, i_related5 int, i_thumbnail varchar(40), i_image varchar(40), i_srp double precision, i_cost double precision, i_avail date, i_stock int, i_isbn char(13), i_page int, i_backing varchar(15), i_dimensions varchar(25), PRIMARY KEY(i_id))");
+		("CREATE TABLE item ( i_id int not null, i_title varchar(60), i_a_id int, i_pub_date date, i_publisher varchar(60), i_subject varchar(60), i_desc @sql.bigCharType@, i_related1 int, i_related2 int, i_related3 int, i_related4 int, i_related5 int, i_thumbnail varchar(500), i_image varchar(500), i_srp double precision, i_cost double precision, i_avail date, i_stock int, i_isbn char(13), i_page int, i_backing varchar(15), i_dimensions varchar(25), PRIMARY KEY(i_id))");
 	    statement.executeUpdate();
 	    con.commit();
 	    System.out.println("Created table ITEM");
